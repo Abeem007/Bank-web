@@ -1,0 +1,28 @@
+/* styles.css */
+.equal-padding {
+  padding: 0px 14px; 
+}
+@media (min-width:400px) {
+    .equal-padding{
+        padding: 0px 7px;
+    }
+}
+@media (min-width: 768px) {
+  .equal-padding {
+    padding: 0px 24px;
+  }
+}
+
+/* Large screens (≥ 1024px) */
+@media (min-width: 1024px) {
+  .equal-padding {
+    padding: 0px 32px;
+  }
+}
+
+/* Extra-large screens (≥ 1280px) */
+@media (min-width: 1280px) {
+  .equal-padding {
+    padding: 0px 40px;
+  }
+}
