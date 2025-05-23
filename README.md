@@ -25,20 +25,6 @@ A modern, responsive banking website built using **React** and **Vite**, showcas
 - 🧭 **React Router** – For client-side routing
 
 
-## 📁 Project Structure
-
-easybank-website/
-├── public/
-├── src/
-│ ├── assets/ # Static assets (images, icons)
-│ ├── components/ # Shared UI components (Header, Footer)
-│ ├── pages/ # Individual route pages (Home, About, etc.)
-│ ├── App.jsx # Main component with routes
-│ └── main.jsx # App entry point
-├── package.json
-├── tailwind.config.js
-└── vite.config.js
-
 Contributing
 Contributions, suggestions, and pull requests are welcome!
 Please open an issue to discuss improvements or report bugs.
