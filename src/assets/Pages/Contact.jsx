@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Logo from "../../images/logo.svg"
 import { motion,AnimatePresence } from "framer-motion";
 
 const Contact = () => {
@@ -18,7 +19,7 @@ const Contact = () => {
           className="w-full max-w-4xl lg:absolute lg:bottom-[-30px] lg:left-4 bg-amber-700 p-4 sm:p-6 m-4 lg:m-0 rounded-lg text-left"
 
         >
-          <img src="src/images/logo.svg" alt="" className="w-20 sm:w-40" />
+          <img src="public/images/logo.svg" alt="" className="w-20 sm:w-40" />
           <h1 className="text-lg sm:text-xl md:text-2xl font-bold mt-3">
             Our Promise Kept
           </h1>
@@ -77,7 +78,7 @@ const Contact = () => {
                 >
                   <h4 className="text-base sm:text-lg pb-2 text-[hsl(233,26%,24%)]">
                     <img
-                      src="src/images/logo.svg"
+                      src={Logo}
                       alt=""
                       className="w-20 sm:w-30"
                     />

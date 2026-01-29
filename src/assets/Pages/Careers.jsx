@@ -1,4 +1,7 @@
+import careers from "../../images/careers.jpg"
+
 const Careers = () => {
+
   return (
     <div className="bg-[hsl(220,16%,96%)] min-h-screen  text-[hsl(233,26%,24%)]">
       <div className="flex justify-center items-center bg-[hsl(220,16%,96%)]">
@@ -19,7 +22,7 @@ const Careers = () => {
           </div>
           <div className="w-full md:w-1/2 flex justify-center">
             <img
-              src="src/images/careers.jpg"
+              src={careers}
               alt="Careers"
               className="w-full h-auto object-cover "
             />

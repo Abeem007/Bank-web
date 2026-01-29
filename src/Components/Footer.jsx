@@ -1,3 +1,10 @@
+import Logo from "../images/logo.svg"
+import Facebook from '../images/icon-facebook.svg'
+import Youtube from "../images/icon-youtube.svg"
+import Twitter from "../images/icon-twitter.svg";
+import Pinterest from "../images/icon-pinterest.svg";
+import Instagram from "../images/icon-instagram.svg";
+
 const Footer = () => {
   return (
     <footer className="bg-[hsl(233,26%,24%)] text-white py-8 px-6 sm:px-12 lg:px-16">
@@ -7,7 +14,7 @@ const Footer = () => {
         <div className="flex flex-col items-center sm:items-start ">
           <img
             className="mb-6 w-[150px] bg-white"
-            src="src/images/logo.svg"
+            src={Logo}
             alt="logo"
           />
 
@@ -15,35 +22,35 @@ const Footer = () => {
           <div className="flex gap-4 cursor-pointer ">
             <a href="">
               <img
-                src="src/images/icon-facebook.svg"
+                src={Facebook}
                 alt="facebook"
                 className="hover:scale-75"
               />
             </a>
             <a href="">
               <img
-                src="src/images/icon-youtube.svg"
+                src={Youtube}
                 alt="youtube"
                 className="hover:scale-75"
               />
             </a>
             <a href="">
               <img
-                src="src/images/icon-twitter.svg"
+                src={Twitter}
                 alt="twitter"
                 className="hover:scale-75"
               />
             </a>
             <a href="">
               <img
-                src="src/images/icon-pinterest.svg"
+                src={Pinterest}
                 alt="pinterest"
                 className="hover:scale-75"
               />
             </a>
             <a href="">
               <img
-                src="src/images/icon-instagram.svg"
+                src={Instagram}
                 alt="instagram"
                 className="hover:scale-75"
               />

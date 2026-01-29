@@ -1,3 +1,6 @@
+import DesktopImg from "../images/bg-intro-desktop.svg";
+import Mockups from "../images/image-mockups.png"
+
 const Main = () => {
   return (
     <div className=" bg-[hsl(0,0%,98%)] flex flex-col lg:flex-row items-center justify-center lg:justify-between lg:h-auto px-6 md:px-18 py-0 overflow-hidden relative pb-5">
@@ -5,13 +8,13 @@ const Main = () => {
       <div className="relative lg:left-[100px] sm:left-0 sm:top-[-85px] lg:w-[60%] flex justify-center mt-10 sm:mt-0 order-1 lg:order-2 ">
        
         <img
-          src="src/images/bg-intro-desktop.svg"
+          src={DesktopImg}
           alt="Background"
           className="absolute w-full h-full top-0 lg:top-[-3rem] right-9 md:top-[-80px] lg:right-20 z-0"
           style={{ marginTop: "-80px", clipPath: "inset(80px 0 0 0)" }}
         />
         <img
-          src="src/images/image-mockups.png"
+          src={Mockups}
           alt="Mockups"
           className="relative w-[100%] top-0 left-7 md:top-[-10px] z-10 "
           style={{ marginTop: "-80px", clipPath: "inset(80px 0 0 0)" }}

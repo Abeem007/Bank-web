@@ -1,17 +1,20 @@
 
-
 import { useState } from "react";
+import Logo from "../images/logo.svg";
+import Hamburger from "../images/icon-hamburger.svg";
+import Close from "../images/icon-close.svg";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <header className="text-[hsl(233,8%,62%)] px-6 py-3 md:py-7 lg:py-4  md:px-8 lg:px-12 xl:px-16 flex items-center justify-between text-[18px] relative ">
       <div className="flex items-center">
-        <img src="src/images/logo.svg" alt="logo" className="h-7 sm:h-10" />
+        <img src={Logo} alt="logo" className="h-7 sm:h-10" />
       </div>
 
-      
       <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8 ;">
         {" "}
         <Link
@@ -45,31 +48,26 @@ const Header = () => {
           Careers
         </Link>
       </nav>
-
-     
       <button className="hidden lg:block text-white text-sm px-4 sm:px-5 py-3 rounded-full bg-gradient-to-r from-green-400 to-blue-400 cursor-pointer w-[10rem]">
         Request Invite
       </button>
-
       <div className="lg:hidden">
         <button onClick={() => setIsOpen(!isOpen)}>
           {!isOpen ? (
             <img
-              src="src/images/icon-hamburger.svg"
+              src={Hamburger}
               alt="Open Menu"
               className="h-6 w-6"
             />
           ) : (
             <img
-              src="src/images/icon-close.svg"
+              src={Close}
               alt="Close Menu"
               className="h-6 w-6 "
             />
           )}
         </button>
       </div>
-
-      
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -109,10 +107,9 @@ const Header = () => {
                       {labels[i]}
                     </Link>
                   );
-                }
+                },
               )}
             </ul>
-           
           </motion.div>
         )}
       </AnimatePresence>
