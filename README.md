@@ -5,7 +5,7 @@ A modern, responsive banking website built using **React** and **Vite**, showcas
 🔧 **Note:** While the homepage design was based on the Frontend Mentor challenge, **the About, Blog, Careers, and Contact pages were personally added and implemented by me** to expand the project and enhance its real-world application.
 
 ## Live Demo
-* easybank-w.netlify.app *
+* easybank-w.netlify.app 
 
 ## 🚀 Features
 
