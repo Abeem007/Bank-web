@@ -4,76 +4,49 @@ import Youtube from "../images/icon-youtube.svg"
 import Twitter from "../images/icon-twitter.svg";
 import Pinterest from "../images/icon-pinterest.svg";
 import Instagram from "../images/icon-instagram.svg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className="bg-[hsl(233,26%,24%)] text-white py-8 px-6 sm:px-12 lg:px-16">
-      
       <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start gap-8 w-full">
-        
         <div className="flex flex-col items-center sm:items-start ">
-          <img
-            className="mb-6 w-[150px] bg-white"
-            src={Logo}
-            alt="logo"
-          />
+          <img className="mb-6 w-[150px] bg-white" src={Logo} alt="logo" />
 
-        
           <div className="flex gap-4 cursor-pointer ">
             <a href="">
-              <img
-                src={Facebook}
-                alt="facebook"
-                className="hover:scale-75"
-              />
+              <img src={Facebook} alt="facebook" className="hover:scale-75" />
             </a>
             <a href="">
-              <img
-                src={Youtube}
-                alt="youtube"
-                className="hover:scale-75"
-              />
+              <img src={Youtube} alt="youtube" className="hover:scale-75" />
             </a>
             <a href="">
-              <img
-                src={Twitter}
-                alt="twitter"
-                className="hover:scale-75"
-              />
+              <img src={Twitter} alt="twitter" className="hover:scale-75" />
             </a>
             <a href="">
-              <img
-                src={Pinterest}
-                alt="pinterest"
-                className="hover:scale-75"
-              />
+              <img src={Pinterest} alt="pinterest" className="hover:scale-75" />
             </a>
             <a href="">
-              <img
-                src={Instagram}
-                alt="instagram"
-                className="hover:scale-75"
-              />
+              <img src={Instagram} alt="instagram" className="hover:scale-75" />
             </a>
           </div>
         </div>
 
-       
         <div className="flex flex-col sm:flex-row text-[hsl(220,16%,96%)] text-sm text-center sm:text-left gap-6 ">
           <ul className="space-y-2">
             <li className="hover:text-[hsl(136,65%,51%)] cursor-pointer">
-              About Us
+              <Link to="/about">About Us</Link>
             </li>
             <li className="hover:text-[hsl(136,65%,51%)] cursor-pointer">
-              Contact
+              <Link to="/contact">Contact</Link>
             </li>
             <li className="hover:text-[hsl(136,65%,51%)] cursor-pointer">
-              Blog
+              <Link to="/blog">Blog</Link>
             </li>
           </ul>
           <ul className="space-y-2">
             <li className="hover:text-[hsl(136,65%,51%)] cursor-pointer">
-              Careers
+              <Link to="/careers">Careers</Link>
             </li>
             <li className="hover:text-[hsl(136,65%,51%)] cursor-pointer">
               Support
@@ -84,7 +57,6 @@ const Footer = () => {
           </ul>
         </div>
 
-       
         <div className="flex flex-col items-center sm:items-end">
           <button className="text-white text-sm px-4 py-3 cursor-pointer rounded-full bg-gradient-to-r from-[hsl(136,65%,51%)] to-[hsl(192,70%,51%)] w-[10rem] hover:opacity-80 transition">
             Request Invite

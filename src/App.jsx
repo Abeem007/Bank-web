@@ -16,23 +16,24 @@ function App() {
   return (
     <Router>
       <Header />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Main />
-              <Reason />
-              <Articles />
-            </>
-          }
-        />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/careers" element={<Careers />} />
-      </Routes>
-
+      <main className="pt-14 md:pt-20 lg:pt-19">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Main />
+                <Reason />
+                <Articles />
+              </>
+            }
+          />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/careers" element={<Careers />} />
+        </Routes>
+      </main>
       <Footer />
     </Router>
   );

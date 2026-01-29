@@ -1,52 +1,80 @@
-
 import { useState } from "react";
 import Logo from "../images/logo.svg";
 import Hamburger from "../images/icon-hamburger.svg";
 import Close from "../images/icon-close.svg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="text-[hsl(233,8%,62%)] px-6 py-3 md:py-7 lg:py-4  md:px-8 lg:px-12 xl:px-16 flex items-center justify-between text-[18px] relative ">
+    <header className="text-[hsl(233,8%,62%)] px-6 py-3 md:py-7 lg:py-4  md:px-8 lg:px-12 xl:px-16 flex items-center justify-between text-[18px] fixed top-0 left-0 right-0 z-50 bg-white shadow-sm ">
       <div className="flex items-center">
         <img src={Logo} alt="logo" className="h-7 sm:h-10" />
       </div>
 
-      <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8 ;">
+      <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8 ">
         {" "}
-        <Link
+        <NavLink
           to="/"
-          className="relative hover:text-gray-900 after:content-[''] after:absolute after:left-0 after:bottom-[-17px] after:w-full after:h-[4px] after:bg-[hsl(136,65%,51%)] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
+          className={({ isActive }) =>
+            `relative hover:text-gray-900 after:content-[''] after:absolute after:left-0 after:bottom-[-17px] after:w-full after:h-[4px] after:bg-[hsl(136,65%,51%)] after:transition-transform after:duration-300 ${
+              isActive
+                ? "text-gray-900 after:scale-x-100"
+                : "after:scale-x-0 hover:after:scale-x-100"
+            }`
+          }
         >
           Home
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to="/about"
-          className="relative hover:text-gray-900 after:content-[''] after:absolute after:left-0 after:bottom-[-17px] after:w-full after:h-[4px] after:bg-[hsl(136,65%,51%)] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
+          className={({ isActive }) =>
+            `relative hover:text-gray-900 after:content-[''] after:absolute after:left-0 after:bottom-[-17px] after:w-full after:h-[4px] after:bg-[hsl(136,65%,51%)] after:transition-transform after:duration-300 ${
+              isActive
+                ? "text-gray-900 after:scale-x-100"
+                : "after:scale-x-0 hover:after:scale-x-100"
+            }`
+          }
         >
           About
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to="/contact"
-          className="relative hover:text-gray-900 after:content-[''] after:absolute after:left-0 after:bottom-[-17px] after:w-full after:h-[4px] after:bg-[hsl(136,65%,51%)] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
+          className={({ isActive }) =>
+            `relative hover:text-gray-900 after:content-[''] after:absolute after:left-0 after:bottom-[-17px] after:w-full after:h-[4px] after:bg-[hsl(136,65%,51%)] after:transition-transform after:duration-300 ${
+              isActive
+                ? "text-gray-900 after:scale-x-100"
+                : "after:scale-x-0 hover:after:scale-x-100"
+            }`
+          }
         >
           Contact
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to="/blog"
-          className="relative hover:text-gray-900 after:content-[''] after:absolute after:left-0 after:bottom-[-17px] after:w-full after:h-[4px] after:bg-[hsl(136,65%,51%)] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
+          className={({ isActive }) =>
+            `relative hover:text-gray-900 after:content-[''] after:absolute after:left-0 after:bottom-[-17px] after:w-full after:h-[4px] after:bg-[hsl(136,65%,51%)] after:transition-transform after:duration-300 ${
+              isActive
+                ? "text-gray-900 after:scale-x-100"
+                : "after:scale-x-0 hover:after:scale-x-100"
+            }`
+          }
         >
           Blog
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to="/careers"
-          className="relative hover:text-gray-900 after:content[''] after:absolute after:left-0 after:bottom-[-17px] after:w-full after:h-[4px] after:bg-[hsl(136,65%,51%)] after:scale-x-0 hover:after:scale-x-100 after:transistion-transform after:duration-300"
+          className={({ isActive }) =>
+            `relative hover:text-gray-900 after:content-[''] after:absolute after:left-0 after:bottom-[-17px] after:w-full after:h-[4px] after:bg-[hsl(136,65%,51%)] after:transition-transform after:duration-300 ${
+              isActive
+                ? "text-gray-900 after:scale-x-100"
+                : "after:scale-x-0 hover:after:scale-x-100"
+            }`
+          }
         >
           Careers
-        </Link>
+        </NavLink>
       </nav>
       <button className="hidden lg:block text-white text-sm px-4 sm:px-5 py-3 rounded-full bg-gradient-to-r from-green-400 to-blue-400 cursor-pointer w-[10rem]">
         Request Invite
@@ -54,17 +82,9 @@ const Header = () => {
       <div className="lg:hidden">
         <button onClick={() => setIsOpen(!isOpen)}>
           {!isOpen ? (
-            <img
-              src={Hamburger}
-              alt="Open Menu"
-              className="h-6 w-6"
-            />
+            <img src={Hamburger} alt="Open Menu" className="h-6 w-6" />
           ) : (
-            <img
-              src={Close}
-              alt="Close Menu"
-              className="h-6 w-6 "
-            />
+            <img src={Close} alt="Close Menu" className="h-6 w-6 " />
           )}
         </button>
       </div>
@@ -85,7 +105,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden absolute top-full left-1/2 transform -translate-x-1/2 w-[90%] max-w-[full] bg-white shadow-lg rounded-md py-6 mt-2 z-50"
+            className="lg:hidden absolute top-20 left-1/2 transform -translate-x-1/2 w-[90%] max-w-[full] bg-white shadow-lg rounded-md py-6  z-50"
           >
             <ul className="flex flex-col items-center space-y-4 text-gray-700">
               {["/", "/about", "/contact", "/blog", "/careers"].map(
@@ -98,14 +118,14 @@ const Header = () => {
                     "Careers",
                   ];
                   return (
-                    <Link
+                    <NavLink
                       to={path}
                       key={path}
                       onClick={() => setIsOpen(false)}
                       className="hover:text-gray-900 cursor-pointer text-lg font-medium"
                     >
                       {labels[i]}
-                    </Link>
+                    </NavLink>
                   );
                 },
               )}
