@@ -31,26 +31,26 @@ const Articles = () => {
     ];
     return (
       <div className="bg-[hsl(0,0%,98%)] pt-15 py-8 px-4 sm:px-8 lg:px-16">
-        {/* Heading */}
+       
         <h1 className="pl-2 sm:pl-5 pb-5 text-[hsl(233,26%,24%)] text-4xl text-center sm:text-left ">
           Latest Articles
         </h1>
 
-        {/* Articles Container */}
+        
         <div className="flex flex-wrap justify-center sm:justify-between gap-6 w-full">
           {Articledata.map((item, index) => (
             <div
               key={index}
               className="flex flex-col w-full sm:w-[48%] lg:w-[23%] p-2"
             >
-              {/* Article Image */}
+             
               <img
                 src={item.images}
                 alt=""
                 className="w-full h-[200px] object-cover rounded-sm"
               />
 
-              {/* Article Content */}
+          
               <div className="bg-[hsl(0,0%,100%)] p-6 rounded-sm text-[hsl(233,8%,62%)]">
                 <p className="pb-3 text-sm">{item.text1}</p>
                 <h1 className="text-[hsl(233,26%,24%)] text-lg font-[500] cursor-pointer hover:text-[hsl(136,65%,51%)] pb-2.5">

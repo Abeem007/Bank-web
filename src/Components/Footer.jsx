@@ -1,9 +1,9 @@
 const Footer = () => {
   return (
     <footer className="bg-[hsl(233,26%,24%)] text-white py-8 px-6 sm:px-12 lg:px-16">
-      {/* Footer Container */}
+      
       <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start gap-8 w-full">
-        {/* Left Section (Logo & Social Links) */}
+        
         <div className="flex flex-col items-center sm:items-start ">
           <img
             className="mb-6 w-[150px] bg-white"
@@ -11,7 +11,7 @@ const Footer = () => {
             alt="logo"
           />
 
-          {/* Social Media Icons */}
+        
           <div className="flex gap-4 cursor-pointer ">
             <a href="">
               <img
@@ -51,7 +51,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Center Section (Navigation Links) */}
+       
         <div className="flex flex-col sm:flex-row text-[hsl(220,16%,96%)] text-sm text-center sm:text-left gap-6 ">
           <ul className="space-y-2">
             <li className="hover:text-[hsl(136,65%,51%)] cursor-pointer">
@@ -77,7 +77,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Right Section (Button & Copyright) */}
+       
         <div className="flex flex-col items-center sm:items-end">
           <button className="text-white text-sm px-4 py-3 cursor-pointer rounded-full bg-gradient-to-r from-[hsl(136,65%,51%)] to-[hsl(192,70%,51%)] w-[10rem] hover:opacity-80 transition">
             Request Invite

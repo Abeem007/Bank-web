@@ -6,12 +6,12 @@ import { motion, AnimatePresence } from "framer-motion";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="text-[hsl(233,8%,62%)] px-6 py-3 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex items-center justify-between text-[18px] relative">
+    <header className="text-[hsl(233,8%,62%)] px-6 py-3 md:py-7 lg:py-4  md:px-8 lg:px-12 xl:px-16 flex items-center justify-between text-[18px] relative ">
       <div className="flex items-center">
         <img src="src/images/logo.svg" alt="logo" className="h-7 sm:h-10" />
       </div>
 
-      {/* Desktop Menu (Hidden on small screens, shown on lg+) */}
+      
       <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8 ;">
         {" "}
         <Link
@@ -46,13 +46,12 @@ const Header = () => {
         </Link>
       </nav>
 
-      {/* Request Invite Button (Hidden on small screens, visible from md and larger) */}
-      <button className="hidden md:block text-white text-sm px-4 sm:px-5 py-3 rounded-full bg-gradient-to-r from-green-400 to-blue-400 cursor-pointer w-[10rem]">
+     
+      <button className="hidden lg:block text-white text-sm px-4 sm:px-5 py-3 rounded-full bg-gradient-to-r from-green-400 to-blue-400 cursor-pointer w-[10rem]">
         Request Invite
       </button>
 
-      {/* Hamburger Menu Button (Only visible on small and medium screens) */}
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <button onClick={() => setIsOpen(!isOpen)}>
           {!isOpen ? (
             <img
@@ -70,11 +69,11 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Mobile Menu (Only visible when open) */}
+      
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className=" md:hidden fixed inset-0 bg-[rgba(19,19,21,0.5)] z-40"
+            className=" lg:hidden fixed inset-0 bg-[rgba(19,19,21,0.5)] z-40"
             onClick={() => setIsOpen(false)}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -88,7 +87,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden absolute top-full left-1/2 transform -translate-x-1/2 w-[90%] max-w-[full] bg-white shadow-lg rounded-md py-6 mt-2 z-50"
+            className="lg:hidden absolute top-full left-1/2 transform -translate-x-1/2 w-[90%] max-w-[full] bg-white shadow-lg rounded-md py-6 mt-2 z-50"
           >
             <ul className="flex flex-col items-center space-y-4 text-gray-700">
               {["/", "/about", "/contact", "/blog", "/careers"].map(
@@ -113,39 +112,7 @@ const Header = () => {
                 }
               )}
             </ul>
-            {/* <ul className="flex flex-col items-center space-y-4 text-gray-700 ">
-            <Link
-              to="/"
-              onClick={() => setIsOpen(false)}
-              className="hover:text-gray-900 cursor-pointer"
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              onClick={() => setIsOpen(false)}
-              className="hover:text-gray-900 cursor-pointer"
-            >
-              About
-            </Link>
-            <Link to="/contact" className="hover:text-gray-900 cursor-pointer">
-              Contact
-            </Link>
-            <Link
-              to="/blog"
-              onClick={() => setIsOpen(false)}
-              className="hover:text-gray-900 cursor-pointer"
-            >
-              Blog
-            </Link>
-            <Link
-              to="/careers"
-              onClick={() => setIsOpen(false)}
-              className="hover:text-gray-900 cursor-pointer"
-            >
-              Careers
-            </Link>
-          </ul> */}
+           
           </motion.div>
         )}
       </AnimatePresence>

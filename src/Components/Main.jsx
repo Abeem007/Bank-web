@@ -1,9 +1,9 @@
 const Main = () => {
   return (
     <div className=" bg-[hsl(0,0%,98%)] flex flex-col lg:flex-row items-center justify-center lg:justify-between lg:h-auto px-6 md:px-18 py-0 overflow-hidden relative pb-5">
-      {/* Right Image Section (Placed on top for md screens) */}
+     
       <div className="relative lg:left-[100px] sm:left-0 sm:top-[-85px] lg:w-[60%] flex justify-center mt-10 sm:mt-0 order-1 lg:order-2 ">
-        {/* md:order-none */}
+       
         <img
           src="src/images/bg-intro-desktop.svg"
           alt="Background"
@@ -17,7 +17,7 @@ const Main = () => {
           style={{ marginTop: "-80px", clipPath: "inset(80px 0 0 0)" }}
         />
       </div>
-      {/* Left Content (Placed on the bottom for md screens) */}
+     
       <div className="flex flex-col lg:w-1/2  text-center lg:text-left lg:pl-10 order-2 lg:order-1 mt-1 md:mt-0">
         
         <h1 className=" text-4xl  md:text-nowrap lg:text-wrap md:text-[3.2rem] lg:text-5xl leading-snug font-medium w-full lg:w-[90%] xl:w-[80%] mb-4 text-[hsl(233,26%,24%)]">

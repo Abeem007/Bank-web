@@ -16,7 +16,7 @@ const Contact = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
           className="w-full max-w-4xl lg:absolute lg:bottom-[-30px] lg:left-4 bg-amber-700 p-4 sm:p-6 m-4 lg:m-0 rounded-lg text-left"
-          // className=" absolute bottom-0 lg:bottom-[-60px] left-4 sm:left-18 lg:left-16 bg-amber-700 p-4 sm:p-6 w-[90%] sm:w-4/5 md:w-2/3 lg:w-1/3 h-auto lg:h-[400px] transform -translate-x-1 rounded-lg flex flex-col items-start text-left "
+
         >
           <img src="src/images/logo.svg" alt="" className="w-20 sm:w-40" />
           <h1 className="text-lg sm:text-xl md:text-2xl font-bold mt-3">
@@ -61,8 +61,7 @@ const Contact = () => {
             >
               Helpdesk
             </h3>
-            {/* Animated Tab Content */}
-            {/* flex-col lg:flex-row lg:flex */}
+            
           </div>
           <div className=" relative min-h-[150px]">
             <AnimatePresence mode="wait">
@@ -73,8 +72,7 @@ const Contact = () => {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 30 }}
                   transition={{ duration: 0.3 }}
-                  // mr-8
-                  // pl-3
+                 
                   className=" absolute lg:static w-full "
                 >
                   <h4 className="text-base sm:text-lg pb-2 text-[hsl(233,26%,24%)]">
@@ -132,13 +130,5 @@ const Contact = () => {
 export default Contact;
 
 {
-  /* <div
-  class="w-full h-96 bg-cover bg-center flex items-center justify-center text-white text-center p-6"
-  style="background-image: url('your-image.jpg');"
->
-  <div class="bg-black bg-opacity-60 p-6 rounded-lg">
-    <h1 class="text-2xl font-bold">Heading</h1>
-    <p class="mt-2 text-lg">This is a paragraph over the image.</p>
-  </div>
-</div>; */
+ 
 }

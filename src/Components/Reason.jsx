@@ -23,7 +23,7 @@ const Reason = () => {
     ];
     return (
       <div className="bg-[hsl(220,16%,96%)] pt-12 mt-[-10px] pb-5 px-4 sm:px-10 lg:px-16">
-        {/* Heading Section */}
+       
         <div className="w-full  lg:w-[50%] p-6  sm:p-12 md:p-16 lg:p-[2rem_1rem_0.5rem_2rem] text-left md:text-left">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl text-[hsl(233,26%,24%)] break-words ">
             Why choose Easybank

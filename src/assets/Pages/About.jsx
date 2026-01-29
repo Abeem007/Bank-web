@@ -21,21 +21,19 @@ const About = () => {
   return (
     <div className="pb-3 bg-[hsl(220,16%,96%)] min-h-screen w-full">
       <div className="relative h-[50vh] w-full overflow-hidden">
-        {/* Background Image */}
+        
         <div
           className="absolute inset-0 bg-cover bg-center "
           style={{ backgroundImage: `url(${backgroundImage})` }}
         />
 
-        {/* Overlay Text */}
+        
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative text-white flex items-end justify-start h-full w-full p-6 sm:p-10"
-          // className={`relative text-white flex items-end justify-start h-full w-full p-6 sm:p-10 transition-all duration-700 ease-in-out ${
-          //   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          // }`}
+          
         >
           <span className="bg-[rgba(183,151,107,0.5)] px-4 sm:px-6 py-12 sm:py-20">
             <motion.h2
@@ -58,7 +56,7 @@ const About = () => {
         </motion.div>
       </div>
 
-      {/* About Section */}
+    
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
