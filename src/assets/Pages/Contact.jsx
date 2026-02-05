@@ -17,7 +17,11 @@ const Contact = () => {
           initial={{ y: 40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
-          className="w-full max-w-4xl lg:absolute lg:bottom-[-30px] lg:left-4 bg-amber-700  bg-opacity-100 p-4 sm:p-6 m-4 lg:m-0 rounded-lg text-left will-change-transform"
+          className="w-full max-w-4xl lg:absolute lg:bottom-[-30px] lg:left-4  bg-opacity-100 p-4 sm:p-6 m-4 lg:m-0 rounded-lg text-left will-change-transform"
+          style={{
+            backgroundColor: "#b45309",
+            background: "#b45309", 
+          }}
         >
           <img src={Logo} alt="" className="w-20 sm:w-40" />
           <h1 className="text-lg sm:text-xl md:text-2xl font-bold mt-3">
