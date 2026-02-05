@@ -105,7 +105,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden absolute top-20 left-1/2 transform -translate-x-1/2 w-[90%] max-w-[full] bg-white shadow-lg rounded-md py-6  z-50"
+            className="lg:hidden fixed top-[4.5rem] left-4 right-4 bg-white shadow-lg rounded-md py-6 z-50"
           >
             <ul className="flex flex-col items-center space-y-4 text-gray-700">
               {["/", "/about", "/contact", "/blog", "/careers"].map(

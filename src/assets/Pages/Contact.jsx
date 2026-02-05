@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Logo from "../../images/logo.svg"
+
 import { motion,AnimatePresence } from "framer-motion";
 
 const Contact = () => {
@@ -16,10 +17,9 @@ const Contact = () => {
           initial={{ y: 40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
-          className="w-full max-w-4xl lg:absolute lg:bottom-[-30px] lg:left-4 bg-amber-700 p-4 sm:p-6 m-4 lg:m-0 rounded-lg text-left"
-
+          className="w-full max-w-4xl lg:absolute lg:bottom-[-30px] lg:left-4 bg-amber-700  bg-opacity-100 p-4 sm:p-6 m-4 lg:m-0 rounded-lg text-left will-change-transform"
         >
-          <img src="public/images/logo.svg" alt="" className="w-20 sm:w-40" />
+          <img src={Logo} alt="" className="w-20 sm:w-40" />
           <h1 className="text-lg sm:text-xl md:text-2xl font-bold mt-3">
             Our Promise Kept
           </h1>
@@ -62,7 +62,6 @@ const Contact = () => {
             >
               Helpdesk
             </h3>
-            
           </div>
           <div className=" relative min-h-[150px]">
             <AnimatePresence mode="wait">
@@ -73,15 +72,10 @@ const Contact = () => {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 30 }}
                   transition={{ duration: 0.3 }}
-                 
                   className=" absolute lg:static w-full "
                 >
                   <h4 className="text-base sm:text-lg pb-2 text-[hsl(233,26%,24%)]">
-                    <img
-                      src={Logo}
-                      alt=""
-                      className="w-20 sm:w-30"
-                    />
+                    <img src={Logo} alt="" className="w-20 sm:w-30" />
                   </h4>
                   <h4 className="text-sm sm:text-base font-bold pt-1 pb-2 text-[hsl(233,26%,24%)] ">
                     {" "}
