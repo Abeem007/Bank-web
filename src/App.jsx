@@ -11,10 +11,12 @@ import About from "./assets/Pages/About";
 import Contact from "./assets/Pages/Contact";
 import Blog from "./assets/Pages/Blog";
 import Careers from "./assets/Pages/Careers";
+import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Header />
       <main className="pt-14 md:pt-20 lg:pt-19">
         <Routes>
